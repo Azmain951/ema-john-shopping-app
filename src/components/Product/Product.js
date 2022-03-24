@@ -5,7 +5,18 @@ const Product = ({ product }) => {
     const { name, price, seller, ratings, img } = product
     return (
         <div className='product-container'>
-            <img src={img} alt="" />
+            <div className='product'>
+                <img src={img} alt="" />
+                <p>{name}</p>
+                <p>Price: {price}</p>
+                <div className="product-details">
+                    <p><small>Seller: {seller}</small></p>
+                    <p><small>Ratings: {ratings}</small></p>
+                </div>
+            </div>
+            <button className='cart-btn'>
+                <p>Add to Cart</p>
+            </button>
         </div>
     );
 };
